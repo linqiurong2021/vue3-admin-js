@@ -24,8 +24,7 @@ module.exports = {
     config.resolve = { // 配置解析别名
       extensions: ['.js', '.json', '.vue'],  // 自动添加文件名后缀
       alias: {
-        '@': path.resolve(__dirname, './src'),
-        '@c': path.resolve(__dirname, './src/components')
+        '@': path.resolve(__dirname, './src')
       }
     }
   },
@@ -59,17 +58,16 @@ module.exports = {
     https: false, // 编译失败时刷新页面
     hot: true, // 开启热加载
     hotOnly: false,
-    proxy: {
-      [process.env.VUE_APP_API]: {
-          target: process.env.VUE_API_DEV_TARGET, //API服务器的地址
-          changeOrigin: true,
-          pathRewrite: {
-              [`^${process.env.VUE_APP_API}`]: ''
-          }
-      }
- 
+    // proxy: {
+    //   [process.env.VUE_APP_API]: {
+    //       target: process.env.VUE_API_DEV_TARGET, //API服务器的地址
+    //       changeOrigin: true,
+    //       pathRewrite: {
+    //           [`^${process.env.VUE_APP_API}`]: ''
+    //       }
+    //   }
       // http://www.web-jshtml.cn/api/vue3  /api/getCode
-    }
+    // }
   },
   /**
    * 第三方插件配置

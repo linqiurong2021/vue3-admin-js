@@ -1,36 +1,31 @@
 <template>
- <div>
-   <a-button type="primary">
-    Primary
-  </a-button>
-  <a-button>Default</a-button>
-  <a-button type="dashed">
-    Dashed
-  </a-button>
-  <a-button type="danger">
-    Danger
-  </a-button>
-  <a-config-provider :auto-insert-space-in-button="false">
-    <a-button type="primary">
-      按钮
-    </a-button>
-  </a-config-provider>
-  <a-button type="primary">
-    按钮
-  </a-button>
-  <a-button type="link">
-    Link
-  </a-button>
-
- </div>
+  <div class="account">
+    <div class="form-wrap">
+      <a-form :form="form">
+        <a-form-item>
+          <label class="color-white">用户名</label>
+          <a-input type="text"/>
+        </a-form-item>
+        <a-form-item>
+          <label class="color-white">密码</label>
+          <a-input type="password" />
+        </a-form-item>
+        <a-form-item>
+          <a-button type="primary" html-type="submit" @click="check">登录</a-button>
+        </a-form-item>
+      </a-form>
+      <div class="text-center font-size-12">
+        <a href="#" class="color-white">忘记密码</a> | <a href="#" class="color-white">注册</a>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Login'
-}
+  name: "Login"
+};
 </script>
-
-<style scoped>
-
+<style lang="scss" scoped>
+@import "./style.scss";
 </style>
