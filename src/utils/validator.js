@@ -12,6 +12,15 @@ export function regPhone(value) {
  * @param {*} value // 密码
  */
 export function regPassword(value) {
+  let reg =/^(?!\D+$)(?![^a-zA-Z]+$)\S{6,20}$/;
+  return reg.test(reg)
+}
 
-  return
+/**
+ * 密码校验
+ * @param {*} value // 密码
+ */
+export function regCode(value) {
+  let reg = /^(?!\D+$)(?![^a-zA-Z]+$)\S{6}$/;
+   return reg.test(reg)
 }

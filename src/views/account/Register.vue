@@ -37,7 +37,7 @@
 
 <script>
 import Captcha from '@/components/Captcha'
-import { checkPhone } from '@/validators/register'
+import { checkPhone, checkConfirm, checkPassword,checkCode } from '@/validators/register'
 import { reactive, toRefs } from 'vue';
 export default {
   name: "Login",
@@ -55,7 +55,10 @@ export default {
       },
       // 表单校验规则
       rules: {
-        username: [{ validator: checkPhone, trigger: 'change' }]
+        username: [{ validator: checkPhone, trigger: 'change' }],
+        password: [{ validator: checkPassword, trigger: 'change' }],
+        confirm: [{ validator: checkConfirm, trigger: 'change' }],
+        code: [{ validator: checkCode, trigger: 'change' }]
       }
     })
     const data = toRefs(formConfig)
