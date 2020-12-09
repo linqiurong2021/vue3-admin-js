@@ -18,8 +18,10 @@
         </a-form-item>
       </a-form>
       <div class="text-center font-size-12">
-        <a href="#" class="color-white">忘记密码</a> | 
-        <router-link to="/register">注册</router-link>
+        <router-link to="/forgot"  class="color-white">忘记密码</router-link> 
+        | 
+        <router-link to="/register" class="color-white">注册</router-link>
+
       </div>
     </div>
   </div>
