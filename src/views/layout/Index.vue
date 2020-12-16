@@ -2,6 +2,7 @@
 <a-layout id="layout-main">
     <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible>
       <Aside />
+      
     </a-layout-sider>
     <a-layout>
       <a-layout-header style="background: #fff; padding: 0">

@@ -1,7 +1,5 @@
 <template>
- <div>
-  {{ $t("header.headerMenu.logout")}}
- </div>
+  <router-view />
 </template>
 
 <script>
