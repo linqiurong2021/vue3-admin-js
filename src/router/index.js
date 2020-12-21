@@ -15,22 +15,11 @@ const routes = [
     component: Layout
   },
   {
-    path: '/about',
-    name: 'About',
-    hidden: true,
-    meta: {
-      title: "关于"
-    },
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
     path: '/manage',
     name: 'manage',
     meta: {
-      title: "管理总台"
+      title: "管理总台",
+      icon: "icon-aside-console"
     },
     component: Layout,
     children: [
@@ -38,15 +27,17 @@ const routes = [
         path: '/user',
         name: 'user',
         meta: {
-          title: "用户管理"
+          title: "用户管理",
+          icon: "icon-aside-user"
         },
-        component: User,
+        component: User
       },
       {
         path: '/role',
         name: 'role',
         meta: {
-          title: "角色管理"
+          title: "角色管理",
+          icon: "icon-aside-home"
         },
         component: Role,
       }

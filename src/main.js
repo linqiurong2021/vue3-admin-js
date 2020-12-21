@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
+// main.scss
+import "./styles/main.scss"
 // Ant Design
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
