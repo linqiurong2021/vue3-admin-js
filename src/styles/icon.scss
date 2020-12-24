@@ -21,8 +21,18 @@ i[class^=icon] {
   width: 21px;
   height: 21px
 }
+.svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+/** svg 图标 **/
+.aside-svg {
+  height: 21px;
+  width: 21px;
+}
 
-/** 图标 */
+/** png 图标 */
 .icon-aside-home {
   background:url("~@/assets/icon/aside-home.png");
 }

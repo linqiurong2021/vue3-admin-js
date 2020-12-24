@@ -1,12 +1,15 @@
 <template>
   <a-sub-menu :key="menu.path">
     <template #title style="padding-left:0px">
-      <span> <i class="icon icon-size-21 mb--5 mr-5" :class="menu.meta && menu.meta.icon" /> {{menu.meta && menu.meta.title}}</span>
+      <span> <SvgIcon className="aside-svg" :iconName="menu.meta && menu.meta.icon"/> {{menu.meta && menu.meta.title}}</span>
     </template>
     <template v-if="menu.children.length">
       <template v-for="child in menu.children" >
         <a-menu-item v-if="!child.children" :key="child.path">
-          <span><i class="icon icon-size-21 mb--5 mr-5" :class="child.meta && child.meta.icon"/><router-link :to="child.path">{{child.meta && child.meta.title }}</router-link></span>
+          <span>
+            <SvgIcon className="aside-svg mr-5 mb--5" :iconName="child.meta && child.meta.icon"/>
+            <router-link :to="child.path">{{child.meta && child.meta.title }}</router-link>
+          </span>
         </a-menu-item>
          <!--有子集-->
         <Menu v-else :menu="child" :key="child.path"/>
@@ -16,6 +19,7 @@
 </template>
 
 <script>
+import SvgIcon from '../svgIcon/Index'
 export default {
   name: "Menu",
   props: {
@@ -26,9 +30,7 @@ export default {
       }
     }
   },
-  setup() {
-    
-  }
+  components: { SvgIcon }
 }
 </script>
 <style lang="scss" scoped>

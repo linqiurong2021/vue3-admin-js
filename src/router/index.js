@@ -19,7 +19,7 @@ const routes = [
     name: 'manage',
     meta: {
       title: "管理总台",
-      icon: "icon-aside-console"
+      icon: "console"
     },
     component: Layout,
     children: [
@@ -28,7 +28,7 @@ const routes = [
         name: 'user',
         meta: {
           title: "用户管理",
-          icon: "icon-aside-user"
+          icon: "user"
         },
         component: User
       },
@@ -37,7 +37,7 @@ const routes = [
         name: 'role',
         meta: {
           title: "角色管理",
-          icon: "icon-aside-home"
+          icon: "role"
         },
         component: Role,
       }
