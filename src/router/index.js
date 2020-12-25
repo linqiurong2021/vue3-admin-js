@@ -25,6 +25,7 @@ const routes = [
   {
     path: '/forgot',
     name: 'Forgot',
+    hidden: true,
     component: Forgot
   },
   {

@@ -43,7 +43,7 @@ export default {
     const data = reactive({
       selectedKeys: selectedKeys,
       openKeys: openKeys,
-      inlineIndent: 0
+      inlineIndent: 8
     })
 
     // console.log(localStorage.getItem("selectMenu"),'data')
@@ -78,5 +78,8 @@ export default {
   .icon{
     opacity: 1;
   }
+}
+.ant-menu-item .anticon, .ant-menu-submenu-title .anticon{
+  margin-right: 5px;
 }
 </style>

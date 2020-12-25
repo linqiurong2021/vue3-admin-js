@@ -2,13 +2,13 @@
   <a-sub-menu :key="menu.path">
     <template #title style="padding-left:0px">
       <div>
-        <svg-icon class="anticon" className="aside-svg mr-5 mb--5" :iconName="menu.meta && menu.meta.icon"/> <span>{{menu.meta && menu.meta.title}}</span>
+        <svg-icon class="anticon" className="aside-svg mb--5" :iconName="menu.meta && menu.meta.icon"/> <span>{{menu.meta && menu.meta.title}}</span>
       </div>
     </template>
     <template v-if="menu.children.length">
       <template v-for="child in menu.children" >
         <a-menu-item v-if="!child.children" :key="child.path">
-          <div> <svg-icon  class="anticon" className="aside-svg mr-5 mb--5" :iconName="child.meta && child.meta.icon"/>
+          <div> <svg-icon  class="anticon" className="aside-svg mb--5" :iconName="child.meta && child.meta.icon"/>
           <span><router-link :to="child.path">{{child.meta && child.meta.title }}</router-link></span></div>
         </a-menu-item>
          <!--有子集-->
@@ -39,5 +39,8 @@ export default {
   .icon{
     opacity: 1;
   }
+}
+.ant-menu-item .anticon, .ant-menu-submenu-title .anticon{
+  margin-right: 5px;
 }
 </style>
