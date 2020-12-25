@@ -4,6 +4,7 @@
       :selectedKeys="data.selectedKeys"
       mode="inline"
       theme="dark"
+      :inlineIndent="data.inlineIndent"
       @select="select"
       @openChange="openChange"
     >
@@ -44,6 +45,7 @@ export default {
     const data = reactive({
       selectedKeys: selectedKeys,
       openKeys: openKeys,
+      inlineIndent: 0
     })
 
     // console.log(localStorage.getItem("selectMenu"),'data')
@@ -72,6 +74,7 @@ export default {
 <style lang="scss" scoped>
 .icon {
   opacity: .6;
+  color:#fff;
 }
 .ant-menu-item-selected {
   .icon{

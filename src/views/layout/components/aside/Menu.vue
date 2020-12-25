@@ -1,7 +1,7 @@
 <template>
   <a-sub-menu :key="menu.path">
     <template #title style="padding-left:0px">
-      <span> <SvgIcon className="aside-svg" :iconName="menu.meta && menu.meta.icon"/> {{menu.meta && menu.meta.title}}</span>
+      <span> <SvgIcon className="aside-svg mr-5 mb--5" :iconName="menu.meta && menu.meta.icon"/> {{menu.meta && menu.meta.title}}</span>
     </template>
     <template v-if="menu.children.length">
       <template v-for="child in menu.children" >
