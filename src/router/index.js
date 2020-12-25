@@ -1,10 +1,32 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import Home from '../views/Home.vue'
+// account
+import Forgot from '../views/account/Forgot.vue'
+import Register from '../views/account/Register.vue'
+import Login from '../views/account/Login.vue'
+// layout
 import Layout from '../views/layout/Index.vue'
-// import Home from '../views/Home.vue'
+// main
 import Role from '../views/manage/Role.vue'
 import User from '../views/manage/User.vue'
+
 const routes = [
+   {
+    path: '/login',
+    hidden: true,
+    name: 'Login',
+    component: Login
+  },
+   {
+    path: '/register',
+    hidden: true,
+    name: 'Register',
+    component: Register
+  },
+  {
+    path: '/forgot',
+    name: 'Forgot',
+    component: Forgot
+  },
   {
     path: '/layout',
     name: 'layout',
@@ -44,7 +66,6 @@ const routes = [
     ]
   },
 ]
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes

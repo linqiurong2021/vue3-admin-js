@@ -2,10 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-
 // svg
 import "./js/svg"
-// svg 组件
+// svg 全局组件
 import SvgIcon from "@/views/layout/components/svgIcon/Index"
 // main.scss
 import "./styles/main.scss"

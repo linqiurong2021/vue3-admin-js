@@ -3,36 +3,35 @@
 
 
 "@ant-design-vue/use@^0.0.1-0":
-  version "0.0.1-alpha.8"
-  resolved "https://registry.yarnpkg.com/@ant-design-vue/use/-/use-0.0.1-alpha.8.tgz#7fd8a1b8a095377fdb50cc20e1fc2f68145e49c4"
-  integrity sha512-E8OLKvsVZjthRfGCA1CT2s7FoWl1HcgxTJFrHTcfMSaNXVT9jZEcJNM3K454gvfpgz3Iu35hwDknSKC4+kMYpA==
+  version "0.0.1-alpha.6"
+  resolved "https://registry.yarnpkg.com/@ant-design-vue/use/-/use-0.0.1-alpha.6.tgz#eafce73abcc7d2736dcbfff1e396c69b84b9e840"
+  integrity sha512-vyLeiVbi4KdCvkRhHFGyYhe2bZ6y0RJupw7+bdCGRrx4oHb/Rsm8MTqs8Nl1k0lX9qQIvNAoa6Rxf3FQH6nI7g==
   dependencies:
+    "@vue/runtime-dom" "^3.0.0-rc.1"
     async-validator "^3.4.0"
     lodash-es "^4.17.15"
     resize-observer-polyfill "^1.5.1"
-    vue "^3.0.0"
 
-"@ant-design/colors@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@ant-design/colors/-/colors-5.0.0.tgz#46b73b4cc6935b35fc8b84555e8e42c8cfc190e6"
-  integrity sha512-Pe1rYorgVC1v4f+InDXvIlQH715pO1g7BsOhy/ehX/U6ebPKqojmkYJKU3lF+84Zmvyar7ngZ28hesAa1nWjLg==
+"@ant-design/colors@^4.0.0":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@ant-design/colors/-/colors-4.0.5.tgz#d7d100d7545cca8f624954604a6892fc48ba5aae"
+  integrity sha512-3mnuX2prnWOWvpFTS2WH2LoouWlOgtnIpc6IarWN6GOzzLF8dW/U8UctuvIPhoboETehZfJ61XP+CGakBEPJ3Q==
   dependencies:
-    "@ctrl/tinycolor" "^3.1.6"
+    tinycolor2 "^1.4.1"
 
 "@ant-design/icons-svg@^4.0.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@ant-design/icons-svg/-/icons-svg-4.1.0.tgz#480b025f4b20ef7fe8f47d4a4846e4fee84ea06c"
   integrity sha512-Fi03PfuUqRs76aI3UWYpP864lkrfPo0hluwGqh7NJdLhvH4iRDc3jbJqZIvRDLHKbXrvAfPPV3+zjUccfFvWOQ==
 
-"@ant-design/icons-vue@^5.1.7":
-  version "5.1.8"
-  resolved "https://registry.yarnpkg.com/@ant-design/icons-vue/-/icons-vue-5.1.8.tgz#77d75bf2f0d35af50cf8d0bf689fb13760eff2ec"
-  integrity sha512-Ml3/+ZQtrCNPV/S8rMKON6eLOkPQwZHwKMdxRPm93Hw3SKc/LYacGpESdTeYOlShE90iHqt+zWZxzrb28ga0sw==
+"@ant-design/icons-vue@^5.1.5":
+  version "5.1.5"
+  resolved "https://registry.yarnpkg.com/@ant-design/icons-vue/-/icons-vue-5.1.5.tgz#8e83ba90a29b7ed8b4c2e7282f5908b9b3de519b"
+  integrity sha512-j1qHhzFCLh4UNoOoVNDFKp4qbzX2bpc/am+rNCqNDeze/TpbQ38nSBSmNPucHuD7koQtAjBW+AIcnToYCgKvpA==
   dependencies:
-    "@ant-design/colors" "^5.0.0"
+    "@ant-design/colors" "^4.0.0"
     "@ant-design/icons-svg" "^4.0.0"
     "@babel/runtime" "^7.10.4"
-    "@types/lodash" "^4.14.165"
     lodash "^4.17.15"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4":
@@ -850,6 +849,7 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
+<<<<<<< HEAD
 "@babel/runtime@^7.10.4", "@babel/runtime@^7.10.5":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
@@ -858,6 +858,9 @@
     regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.11.0", "@babel/runtime@^7.8.4":
+=======
+"@babel/runtime@^7.10.4", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.0", "@babel/runtime@^7.8.4":
+>>>>>>> feature-account-v0.1
   version "7.12.1"
   resolved "https://registry.npm.taobao.org/@babel/runtime/download/@babel/runtime-7.12.1.tgz#b4116a6b6711d010b2dad3b7b6e43bf1b9954740"
   integrity sha1-tBFqa2cR0BCy2tO3tuQ78bmVR0A=
@@ -1485,7 +1488,7 @@
     "@vue/reactivity" "3.0.2"
     "@vue/shared" "3.0.2"
 
-"@vue/runtime-dom@3.0.2":
+"@vue/runtime-dom@3.0.2", "@vue/runtime-dom@^3.0.0-rc.1":
   version "3.0.2"
   resolved "https://registry.npm.taobao.org/@vue/runtime-dom/download/@vue/runtime-dom-3.0.2.tgz#9d166d03225558025d3d80f5039b646e0051b71c"
   integrity sha1-nRZtAyJVWAJdPYD1A5tkbgBRtxw=
@@ -1788,6 +1791,7 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
+<<<<<<< HEAD
 ant-design-vue@^2.0.0-rc.4:
   version "2.0.0-rc.4"
   resolved "https://registry.yarnpkg.com/ant-design-vue/-/ant-design-vue-2.0.0-rc.4.tgz#1f3da62be4ff09760db16545c0cf7ab0c303a4dc"
@@ -1795,6 +1799,15 @@ ant-design-vue@^2.0.0-rc.4:
   dependencies:
     "@ant-design-vue/use" "^0.0.1-0"
     "@ant-design/icons-vue" "^5.1.7"
+=======
+ant-design-vue@^2.0.0-beta.10:
+  version "2.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/ant-design-vue/-/ant-design-vue-2.0.0-beta.10.tgz#66ecfe029458b12d276139bd7fe27a4624af3c75"
+  integrity sha512-32ZewKAvFBboluvBMsO7Y15LEWxnh2SO/J/h9Sq1qUEXqVt/HXwyg1KmFnSz2kc5j6Av5UtVjLu8rzHdZAOtTw==
+  dependencies:
+    "@ant-design-vue/use" "^0.0.1-0"
+    "@ant-design/icons-vue" "^5.1.5"
+>>>>>>> feature-account-v0.1
     "@babel/runtime" "^7.10.5"
     "@simonwep/pickr" "~1.7.0"
     add-dom-event-listener "^1.0.2"
@@ -1819,7 +1832,10 @@ ant-design-vue@^2.0.0-rc.4:
     scroll-into-view-if-needed "^2.2.25"
     shallow-equal "^1.0.0"
     shallowequal "^1.0.2"
+<<<<<<< HEAD
     vue-types "^3.0.0"
+=======
+>>>>>>> feature-account-v0.1
     warning "^4.0.0"
 
 any-promise@^1.0.0:
@@ -1958,9 +1974,15 @@ async-limiter@~1.0.0:
   integrity sha1-3TeelPDbgxCwgpH51kwyCXZmF/0=
 
 async-validator@^3.3.0, async-validator@^3.4.0:
+<<<<<<< HEAD
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/async-validator/-/async-validator-3.5.1.tgz#cd62b9688b2465f48420e27adb47760ab1b5559f"
   integrity sha512-DDmKA7sdSAJtTVeNZHrnr2yojfFaoeW8MfQN8CeuXg8DDQHTqKk9Fdv38dSvnesHoO8MUwMI2HphOeSyIF+wmQ==
+=======
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/async-validator/-/async-validator-3.4.0.tgz#871b3e594124bf4c4eb7bcd1a9e78b44f3b09cae"
+  integrity sha512-VrFk4eYiJAWKskEz115iiuCf9O0ftnMMPXrOFMqyzGH2KxO7YwncKyn/FgOOP+0MDHMfXL7gLExagCutaZGigA==
+>>>>>>> feature-account-v0.1
 
 async@^2.6.2:
   version "2.6.3"
@@ -5200,7 +5222,11 @@ ismobilejs@^1.0.0:
   resolved "https://registry.yarnpkg.com/ismobilejs/-/ismobilejs-1.1.1.tgz#c56ca0ae8e52b24ca0f22ba5ef3215a2ddbbaa0e"
   integrity sha512-VaFW53yt8QO61k2WJui0dHf4SlL8lxBofUuUmwBo0ljPk0Drz2TiuDW4jo3wDcv41qy/SxrJ+VAzJ/qYqsmzRw==
 
+<<<<<<< HEAD
 isobject@^2.0.0, isobject@^2.1.0:
+=======
+isobject@^2.0.0:
+>>>>>>> feature-account-v0.1
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/isobject/download/isobject-2.1.0.tgz#f065561096a3f1da2ef46272f815c840d87e0c89"
   integrity sha1-8GVWEJaj8dou9GJy+BXIQNh+DIk=
@@ -7491,10 +7517,10 @@ sass-loader@^8.0.2:
     schema-utils "^2.6.1"
     semver "^6.3.0"
 
-sass@^1.26.5:
-  version "1.27.0"
-  resolved "https://registry.npm.taobao.org/sass/download/sass-1.27.0.tgz#0657ff674206b95ec20dc638a93e179c78f6ada2"
-  integrity sha1-Blf/Z0IGuV7CDcY4qT4XnHj2raI=
+sass@^1.28.0:
+  version "1.28.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.28.0.tgz#546f1308ff74cc4ec2ad735fd35dc18bc3f51f72"
+  integrity sha512-9FWX/0wuE1KxwfiP02chZhHaPzu6adpx9+wGch7WMOuHy5npOo0UapRI3FNSHva2CczaYJu2yNUBN8cCSqHz/A==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
@@ -8315,6 +8341,11 @@ timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.npm.taobao.org/timsort/download/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
+
+tinycolor2@^1.4.1:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
+  integrity sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==
 
 tmp@^0.0.33:
   version "0.0.33"

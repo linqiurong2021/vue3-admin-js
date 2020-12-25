@@ -1,6 +1,6 @@
 <template>
 <a-layout id="layout-main">
-    <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible>
+    <a-layout-sider :collapsed="collapsed" :trigger="null" collapsible>
       <Aside :collapsed="collapsed"/>
     </a-layout-sider>
     <a-layout>
