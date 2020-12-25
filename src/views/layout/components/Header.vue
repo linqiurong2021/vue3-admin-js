@@ -1,5 +1,8 @@
 <template>
  <div class="header-wrap">
+    <div class="menu-left">
+      <svg-icon :iconName="iconName" className="collapsed" @click="changeCollapsed"/>
+    </div>
     <div class="menu-right">
       <a-dropdown>
         <div class="avatar">
@@ -10,18 +13,18 @@
         <template #overlay>
           <a-menu>
             <a-menu-item key="0">
-              <div class="menu-item"> <SvgIcon iconName="user" className="svg" /> 17605048999</div>
+              <div class="menu-item"> <svg-icon iconName="user" className="svg" /> 17605048999</div>
             </a-menu-item>
             <a-menu-divider />
             <a-menu-item key="1">
             <div class="menu-item">
-              <SvgIcon iconName="language" className="svg" /> 
+              <svg-icon iconName="language" className="svg" /> 
               <span class="language-item" :class="{'current-language': item.code == currentLanguage}" v-for="item in languageMenu" :key="item.code" @click="changeLanguage(item.code)">{{item.label}}</span>
             </div>
             </a-menu-item>
             <a-menu-divider />
             <a-menu-item key="3">
-              <SvgIcon iconName="logout" className="svg" /> 
+              <svg-icon iconName="logout" className="svg" /> 
               {{ $t("header.headerMenu.logout") }}
             </a-menu-item>
           </a-menu>
@@ -34,19 +37,23 @@
 <script>
 import { useI18n } from 'vue-i18n'
 
-import { reactive, toRefs } from 'vue'
+import { reactive, toRefs, computed } from 'vue'
 
-import SvgIcon from '@/views/layout/components/svgIcon/Index'
 export default {
   name: "Header",
-  components: { SvgIcon },
-  setup() {
+  props: {
+    collapsed: {
+      type: Boolean,
+      default: false
+    }
+  },
+  setup(props, context) {
       // 需要导入
       const { locale } = useI18n({ useScope: 'global' })
       //
       const data = reactive({
         languageMenu: [{label:"中文",code: "cn"}, {label:"EN", code: "en"}],
-        currentLanguage: 'cn'
+        currentLanguage: 'cn',
       })
 
       function changeLanguage(code) {
@@ -54,15 +61,36 @@ export default {
         locale.value = code
       }
 
+      const iconName = computed(()=>{
+        return props.collapsed ? "menu_on" : "menu_off"
+      })
+      //
+      function changeCollapsed() {
+        context.emit("collapsed")
+      }
+
       return {
         ...toRefs(data),
-        changeLanguage
+        iconName,
+        changeLanguage,
+        changeCollapsed
       }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.menu-left {
+  float: left;
+  span {
+    margin-left: 16px;
+    cursor: pointer;
+    .collapsed{
+      width: 21px;
+      height: 21px;
+    }
+  }
+}
 .menu-right {
   float:right
 }

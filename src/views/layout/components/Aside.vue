@@ -13,10 +13,10 @@
           <template v-if="!item.hidden">
             <!--无子集-->
             <a-menu-item v-if="!item.children" :key="item.path" >
-              <span>
-                <SvgIcon className="aside-svg" :iconName="item.meta && item.meta.icon"/> 
-                <router-link :to="item.path">{{item.meta && item.meta.title }}</router-link>
-              </span>
+              <div>
+                <svg-icon class="anticon" className="aside-svg" :iconName="item.meta && item.meta.icon"/> 
+                <span><router-link :to="item.path">{{item.meta && item.meta.title }}</router-link></span>  
+              </div>
             </a-menu-item>
             <!--有子集-->
             <Menu v-else :menu="item" :key="item.path"/>
@@ -29,10 +29,9 @@
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import Menu from './aside/Menu'
-import SvgIcon from './svgIcon/Index'
 export default {
   name: "Aside",
-  components: { Menu, SvgIcon },
+  components: { Menu },
   setup() {
     const { options } = useRouter()
     const router = options.routes
@@ -41,7 +40,6 @@ export default {
     let storeOpenKeys = localStorage.getItem("menuOpenKeys")  ?  localStorage.getItem("menuOpenKeys") : []
     let openKeys = Array.isArray(storeOpenKeys) ? storeOpenKeys : [localStorage.getItem("menuOpenKeys")]
 
-    console.log(selectedKeys, openKeys,'E')
     const data = reactive({
       selectedKeys: selectedKeys,
       openKeys: openKeys,
