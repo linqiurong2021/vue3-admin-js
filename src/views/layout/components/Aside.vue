@@ -11,11 +11,11 @@
       <template v-for="item in router" >
           <!--非隐藏项-->
           <template v-if="!item.hidden">
-            <!--无子集-->
-            <a-menu-item v-if="!item.children" :key="item.path" >
+            <!--只有一个字集-->
+            <a-menu-item v-if="hasOnlyChildren(item)" :key="item.path" >
               <div>
-                <svg-icon class="anticon" className="aside-svg" :iconName="item.meta && item.meta.icon"/> 
-                <span><router-link :to="item.path">{{item.meta && item.meta.title }}</router-link></span>  
+                <svg-icon class="anticon" className="aside-svg" :iconName="item.children[0].meta && item.children[0].meta.icon"/> 
+                <span><router-link :to="item.children[0].path">{{item.children[0].meta && item.children[0].meta.title }}</router-link></span>  
               </div>
             </a-menu-item>
             <!--有子集-->
@@ -56,10 +56,23 @@ export default {
       localStorage.setItem("menuOpenKeys", openKeys)
       data.selectedKeys = []
     }
+    // 只有一个子节点
+    const hasOnlyChildren = (item) => {
+      // 无子集
+      if (!item.children) {
+        return false
+      }
+      // 过滤隐藏的子级路由
+      const routers = item.children.filter(item => item.hidden ? false : true);
+      // 判断最终结果 
+      if(routers.length === 1) { return true; }
+      return false;
+    }
 
     const functions = {
       select,
-      openChange
+      openChange,
+      hasOnlyChildren
     }
     return {
       data,

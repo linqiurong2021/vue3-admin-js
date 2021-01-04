@@ -8,6 +8,7 @@ import Layout from '../views/layout/Index.vue'
 // main
 import Role from '../views/manage/Role.vue'
 import User from '../views/manage/User.vue'
+import Home from '../views/home/Index.vue'
 
 const routes = [
    {
@@ -30,12 +31,32 @@ const routes = [
   },
   {
     path: '/layout',
-    name: 'layout',
+    name: 'Layout',
     hidden: true,
     meta: {
       title: "布局"
     },
     component: Layout
+  },
+  {
+    path: '/index',
+    name: 'Index',
+    hidden: false,
+    meta: {
+      title: "主页"
+    },
+    component: Layout,
+    children: [
+       {
+        path: '/home',
+        name: 'Home',
+        meta: {
+          title: "主页",
+          icon: "home"
+        },
+        component: Home
+      },
+    ]
   },
   {
     path: '/manage',
