@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
+// axios
+import axios from 'axios'
 // svg
 import "./js/svg"
 // svg 全局组件
@@ -13,4 +16,9 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 // i18n 国际化
 import i18n from './language'
-createApp(App).use(store).use(router).use(Antd).use(i18n).component("svg-icon", SvgIcon).mount('#app')
+
+const app = createApp(App)
+// 设置全局属性
+app.config.globalProperties.$axios = axios
+//
+app.use(store).use(router).use(Antd).use(i18n).component("svg-icon", SvgIcon).mount('#app')

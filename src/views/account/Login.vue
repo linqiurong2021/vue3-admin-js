@@ -14,7 +14,7 @@
           <Captcha />
         </a-form-item>
         <a-form-item>
-          <a-button type="primary" html-type="submit" @click="check">登录</a-button>
+          <a-button type="primary" html-type="submit" @click="doLogin">登录</a-button>
         </a-form-item>
       </a-form>
       <div class="text-center font-size-12">
@@ -29,12 +29,23 @@
 
 <script>
 import Captcha from '@/components/captcha/Index'
+import { login } from '@/api/account'
 export default {
   name: "Login",
   components: {
     Captcha
   },
   setup() {
+
+    function doLogin () {
+      login({id: "111",name:"2222"}).then((res)=>{
+        console.log(res,'res')
+      })
+    }
+
+    return {
+      doLogin
+    }
   }
 };
 </script>
