@@ -3,8 +3,8 @@ import service from '@/utils/axios'
 const getCode = (data)=> {
   console.log(data,'data')
   return service.request({
-    url : "",
-    method: "",
+    url: "/getCode/",
+    method: "post",
     data
   })
 }

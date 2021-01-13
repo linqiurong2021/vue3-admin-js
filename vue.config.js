@@ -54,11 +54,11 @@ module.exports = {
     hot: true, // 开启热加载
     hotOnly: false,
     proxy: {
-      [process.env.VUE_APP_API]: {
-          target: process.env.VUE_API_DEV_TARGET, //API服务器的地址
+      [process.env.VUE_APP_API_PREFIX]: {
+          target: process.env.VUE_APP_API_URL, //API服务器的地址
           changeOrigin: true,
           pathRewrite: {
-              [`^${process.env.VUE_APP_API}`]: ''
+              [`^${process.env.VUE_APP_API_PREFIX}`]: ''
           }
       }
     }

@@ -1,7 +1,8 @@
 import axios from 'axios'
 
+// baseURL 默认为请求前缀 可在.env.* 文件中设置
 const service = axios.create({
-  baseURL: 'https://some-domain.com/api/',
+  baseURL: process.env.VUE_APP_API_PREFIX,
   timeout: 5000,
 })
 

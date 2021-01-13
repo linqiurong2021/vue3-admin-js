@@ -18,7 +18,7 @@
           <label class="color-white">校验码</label>
          <a-row :gutter="8">
           <a-col :span="14"><a-input  :value="form.code" type="password" autocomplete="off"/></a-col>
-          <a-col :span="10"><a-button type="primary" block @click="getCode" :loading="btnLoading" :disabled="btnDisabled" >{{btnText}}</a-button></a-col>
+          <a-col :span="10"><a-button type="primary" block @click="getVerifyCode" :loading="btnLoading" :disabled="btnDisabled" >{{btnText}}</a-button></a-col>
         </a-row>
         </a-form-item>
         <a-form-item>
@@ -40,6 +40,7 @@ import { message } from 'ant-design-vue'
 import Captcha from '@/components/captcha/Index'
 import { checkPhone, checkConfirm, checkPassword,checkCode } from '@/validators/register'
 import { reactive, toRefs } from 'vue';
+import { getCode } from '@/api/account.js'
 export default {
   name: "Login",
   components: {
@@ -76,8 +77,12 @@ export default {
       console.log('register')
     }
     // 获取校验码
-    const getCode = () => {
-
+    const getVerifyCode = () => {
+      console.error("error")
+      let params = {aaa: 'aaaa'}
+      getCode(params).then((res)=>{
+        console.log(res,'res')
+      })
       if(!formConfig.form.username){
         message.error("用户名不能为空")
         return
@@ -97,7 +102,7 @@ export default {
       ...form,
       ...data,
       register,
-      getCode
+      getVerifyCode
     }
   }
 };
